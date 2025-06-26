@@ -1,0 +1,9 @@
+# Folder dependensi Composer
+/vendor
+
+# File konfigurasi yang berisi data rahasia
+/config/database.php
+/config/midtrans.php
+
+# File log
+*.log
