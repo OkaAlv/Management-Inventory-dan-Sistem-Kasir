@@ -1,5 +1,4 @@
 Amira Bakery - Aplikasi Point of Sale (POS)
-(Ganti dengan path ke screenshot dashboard Anda)
 
 Aplikasi Point of Sale (POS) berbasis web yang dirancang untuk Amira Bakery. Dibangun dengan PHP native, aplikasi ini menyediakan fungsionalitas kasir, manajemen produk, manajemen karyawan, dan pelaporan penjualan yang interaktif, serta dilengkapi dengan integrasi pembayaran digital melalui QRIS.
 
@@ -38,31 +37,23 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan aplikasi ini di l
 
 1. Clone Repository
 Buka terminal atau Git Bash, lalu clone repository ini ke dalam direktori server web Anda (htdocs untuk XAMPP, www untuk Laragon).
-
 Bash
+git clone https://github.com/OkaAlv/Management-Inventory-dan-Sistem-Kasir.git
+cd path to file dimana anda mengcloning git
 
-git clone https://github.com/NAMA_USER_ANDA/NAMA_REPO_ANDA.git
-cd NAMA_REPO_ANDA
 2. Install Dependencies
 Jalankan Composer untuk mengunduh library yang dibutuhkan (seperti Midtrans).
-
-Bash
-
 composer install
+
 3. Konfigurasi Database
 Buka phpMyAdmin (atau klien database lainnya).
-
 Buat sebuah database baru, contoh: amira_bakery_db.
-
 Impor file database.sql (pastikan Anda sudah mengekspornya dari proyek Anda) ke dalam database yang baru saja Anda buat. Ini akan membuat semua tabel dan data awal yang dibutuhkan.
 
 4. Konfigurasi Lingkungan
 Salin file config/database.example.php dan beri nama config/database.php.
-
 Salin file config/midtrans.example.php dan beri nama config/midtrans.php.
-
 Buka config/database.php dan sesuaikan dengan kredensial database lokal Anda:
-
 PHP
 
 // config/database.php
@@ -83,18 +74,15 @@ PHP
 
 // config/app.php
 $base_url = 'http://localhost/amira-bakery-pos'; // Sesuaikan jika nama foldernya berbeda
+
 5. Jalankan Aplikasi
 Jalankan server Apache dan MySQL Anda melalui XAMPP.
-
 Buka browser dan akses URL proyek Anda: http://localhost/NAMA_FOLDER_PROYEK/
-
 Aplikasi akan mengarahkan Anda ke halaman login.
 
 6. Akun Default
 Username: admin
-
 Password: admin123
-
 Struktur Folder Proyek
 /
 ├── api/              # Logika untuk API (QRIS, cek status, dll.)
